@@ -51,18 +51,9 @@ print(y_test.values)
 
 
 import statsmodels.api as sm 
-X = np.append(arr = np.ones((14,1)).astype(int), values=X, axis=1 )
-X_l = sonveriler.iloc[:,[0,1,2,3,4,5]].values
+x = np.append(arr = np.ones((14,1)).astype(int), values=X, axis=1 )
+X_l = X.iloc[:,[1,2,3,]].values
 X_l = np.array(X_l,dtype=float)
 model = sm.OLS(y,X_l).fit()
 
 print(model.summary())
-
-
-
-
-
-
-
-
-
