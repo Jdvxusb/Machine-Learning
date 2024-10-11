@@ -43,7 +43,6 @@ classifier.add(Dense(6, activation='relu'))
 classifier.add(Dense(1, activation='sigmoid'))
 
 classifier.compile(optimizer='adam',loss='binary_crossentropy', metrics=['accuracy'])
-
 classifier.fit(x_train, y_train, epochs=50)
 
 y_pred = classifier.predict(x_test)
